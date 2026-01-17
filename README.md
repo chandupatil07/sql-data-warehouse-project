@@ -1,65 +1,169 @@
-# sql-data-warehouse-project
-Developed a modern data warehouse in SQL Server with end-to-end ETL pipelines, fact-dimension modeling, and analytical queries to deliver business-ready data
+# SQL Data Warehouse Project
 
-# Data Warehouse and Analytics Project 🚀
+## 📌 Project Overview
+This project demonstrates an **end-to-end SQL-based Data Warehouse**
+designed using the **Bronze, Silver, and Gold layer architecture**.
 
-Welcome to the **Data Warehouse and Analytics Project** repository!  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a modern data warehouse to generating actionable insights. It is designed as a **portfolio project** and follows industry best practices in **data engineering and analytics**.
+The objective of this project is to ingest raw data from multiple sources,
+clean and standardize it, apply business logic, and finally make it
+**analytics-ready for reporting and decision-making**.
 
----
-
-## 📌 Project Requirements
-
-### 🏗️ Building the Data Warehouse (Data Engineering)
-
-#### 🎯 Objective
-Build a modern data warehouse using **SQL Server** to consolidate sales data from multiple sources, enabling analytical reporting and informed decision-making.
-
-#### 📋 Specifications
-- **Data Sources:** Import data from two source systems (**ERP** and **CRM**) provided as CSV files.  
-- **Data Quality:** Cleanse and resolve data quality issues before analysis.  
-- **Integration:** Combine both sources into a single, user-friendly data model designed for analytical queries.  
-- **Scope:** Focus on the latest dataset only; historization of data is not required.  
-- **Documentation:** Provide clear documentation of the data model to support business stakeholders and analytics teams.
+This project follows **industry best practices** used in modern data
+engineering and analytics systems.
 
 ---
 
-## 📊 BI: Analytics & Reporting (Data Analytics)
+## 🏗️ Data Warehouse Architecture
+![Data Architecture](docs/data_architecture.png)
 
-#### 🎯 Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+The architecture is divided into three layers:
 
-These insights help stakeholders track key business metrics and support strategic decision-making.
-
----
-
-## 🛠️ Technologies Used
-- SQL Server  
-- SQL (ETL & Analytics)  
-- CSV Data Sources  
-- Data Warehousing Concepts (Bronze, Silver, Gold Layers)  
-- Fact & Dimension (Star Schema) Modeling  
+- **Bronze Layer** – Raw data ingestion
+- **Silver Layer** – Data cleansing and transformation
+- **Gold Layer** – Business-ready aggregated data
 
 ---
 
-## 📄 License
-This project is licensed under the **MIT License**.  
-You are free to use, modify, and share this project with proper attribution.
+## 🔄 ETL Flow
+![ETL Flow](docs/ETL.png)
+
+The ETL process follows a **batch processing approach**:
+- Extract data from source systems (CRM, ERP)
+- Load raw data into Bronze layer
+- Transform and clean data in Silver layer
+- Aggregate and apply business logic in Gold layer
 
 ---
 
-## 👤 About Me
+## 📂 Data Flow
+![Data Flow](docs/data_flow.png)
 
-Hi! I’m **Chandrashekhar Patil**, a third-year college student with a strong interest in **Data Engineering, SQL, and Analytics**.  
-I am currently learning how to build **modern data warehouses**, design **ETL pipelines**, and perform **data analysis** using SQL Server.  
-This project is part of my learning journey and portfolio to strengthen my practical skills and prepare for industry roles.
-
-📍 College: **SGGS College, Nanded**  
-📚 Focus Areas: SQL, Data Warehousing, ETL, Analytics  
+This diagram shows how data moves from **source systems**
+to the **data warehouse layers** and finally to **analytics tools**.
 
 ---
 
-⭐ If you find this project useful, feel free to explore, fork, or give it a star!
+## 🧱 Data Warehouse Layers
+
+### 🥉 Bronze Layer (Raw Data)
+- Stores data **as-is** from source systems
+- No transformations applied
+- Used for traceability and auditing
+
+**Load Type:**
+- Full Load
+- Truncate & Insert
+
+**Objects:**
+- Tables
+
+---
+
+### 🥈 Silver Layer (Cleaned Data)
+- Data cleansing and standardization
+- Handling missing values
+- Data normalization
+- Derived columns
+- Business-friendly formats
+
+**Transformations Include:**
+- Data cleansing
+- Standardization
+- Enrichment
+- Business rule application
+
+**Objects:**
+- Tables
+
+---
+
+### 🥇 Gold Layer (Business-Ready Data)
+- Aggregated and optimized data
+- Designed for analytics and reporting
+- Supports BI tools and ad-hoc queries
+
+**Transformations Include:**
+- Aggregations
+- Business logic
+- KPI calculations
+
+**Objects:**
+- Views
+- Aggregated tables
+- Star schema / flat tables
+
+---
+
+## ✅ Data Quality Checks
+Data quality checks are implemented to ensure **accuracy and reliability**.
+
+Checks include:
+- Null value checks
+- Duplicate records
+- Referential integrity
+- Business rule validation
+
+SQL scripts for data quality checks are available in the `/tests` folder.
+
+---
+
+## 📊 Data Consumption
+The Gold layer data is consumed by:
+- **Power BI dashboards**
+- **Ad-hoc SQL queries**
+- **Business reports**
+
+This enables stakeholders to make **data-driven decisions**.
+
+---
+
+## 🛠️ Tools & Technologies Used
+- SQL
+- Data Warehousing Concepts
+- Git & GitHub
+- Power BI
+- ETL Design Principles
+
+---
+
+## 📁 Repository Structure
+sql-data-warehouse-project/
+│
+├── datasets/ # Source datasets
+├── scripts/
+│ ├── bronze/ # Bronze layer SQL scripts
+│ ├── silver/ # Silver layer SQL scripts
+│ └── gold/ # Gold layer SQL scripts
+│
+├── tests/ # Data quality check scripts
+├── docs/ # Architecture, ETL, and documentation
+├── README.md
+└── LICENSE
+
+
+---
+
+## 🎯 Key Learnings
+- End-to-end data warehouse design
+- Layered architecture (Bronze, Silver, Gold)
+- Writing optimized SQL transformations
+- Implementing data quality checks
+- Preparing data for BI and analytics
+
+---
+
+## 🚀 Future Enhancements
+- Incremental loading
+- Scheduling using orchestration tools
+- Advanced data validation
+- Performance optimization
+
+---
+
+## 👤 Author
+**Chandrashekhar Patil**  
+Third Year Computer Science Student  
+Aspiring Data Analyst / Data Engineer  
+
+🔗 GitHub: https://github.com/chandupatil07  
+🔗 LinkedIn: https://www.linkedin.com/in/chandupatil07/
