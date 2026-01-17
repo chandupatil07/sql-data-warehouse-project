@@ -14,7 +14,8 @@ engineering and analytics systems.
 ---
 
 ## 🏗️ Data Warehouse Architecture
-![Data Architecture](docs/data_architecture.png)
+<img width="1915" height="912" alt="Data_Architecture" src="https://github.com/user-attachments/assets/659ead05-adf9-43fa-be7d-0e7db540cbf7" />
+
 
 The architecture is divided into three layers:
 
@@ -36,7 +37,8 @@ The ETL process follows a **batch processing approach**:
 ---
 
 ## 📂 Data Flow
-![Data Flow](docs/data_flow.png)
+<img width="1918" height="920" alt="Data_Flow" src="https://github.com/user-attachments/assets/cfea366f-f561-4f9a-97a1-18b84cd39e01" />
+
 
 This diagram shows how data moves from **source systems**
 to the **data warehouse layers** and finally to **analytics tools**.
